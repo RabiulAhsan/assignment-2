@@ -217,3 +217,18 @@ nav {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
+
+/* footer section  */
+
+.footer-container {
+  padding: 5% 12%;
+}
+
+.footer {
+  background: #fff4e7;
+  font-size: 1rem;
+  color: #727272;
+  border-radius: 2px;
+  text-align: center;
+  padding: 2.5rem 0;
+}
