@@ -3,6 +3,7 @@
   text-decoration: none;
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  font-size: 100%;
 }
 .btn {
   font-size: 1.25rem;
@@ -51,7 +52,7 @@ nav {
   max-width: 850px;
 }
 .header-title {
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: 700;
 }
 .header-desc {
@@ -110,6 +111,7 @@ nav {
 .feature {
   display: flex;
   padding: 0 12%;
+  position: relative;
 }
 .feature-container {
   width: 50%;
@@ -145,10 +147,28 @@ nav {
 }
 .feature-img {
   padding: 0 0 0 10%;
+  max-width: 580px;
+  max-height: 800px;
 }
 .feature-img img {
-  max-width: 550px;
-  max-height: 750px;
+  width: 100%;
+  height: 100%;
+}
+.feature-btn {
+  position: absolute;
+  padding: 32px;
+  left: 680px;
+  bottom: -20px;
+  line-height: 30px;
+  background: #ff900e;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+}
+.feature-btn .span-3 {
+  font-size: 1.2rem;
 }
 
 /* fact section  */
@@ -176,6 +196,10 @@ nav {
   border: 2px solid #ff900e;
   border-radius: 10px;
   padding: 2.5rem;
+  transition: 0.5s;
+}
+.fact-item:hover {
+  transform: scale(1.2);
 }
 .fact-item h3 {
   color: #424242;
@@ -231,4 +255,84 @@ nav {
   border-radius: 2px;
   text-align: center;
   padding: 2.5rem 0;
+}
+
+/* responsive  */
+
+@media screen and (max-width: 576px) {
+  * {
+    font-size: 60%;
+  }
+
+  /* header  */
+
+  nav {
+    flex-direction: column;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+  }
+  .navbar a {
+    margin: 1rem 0;
+  }
+
+  /* team section  */
+  .team {
+    flex-direction: column;
+  }
+  .team-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-container {
+    text-align: center;
+  }
+  .span-2 {
+    font-size: 2.8rem;
+  }
+
+  .team-btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* features section  */
+
+  .feature {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .feature-container {
+    width: 100%;
+  }
+
+  .feature-img {
+    max-height: 450px;
+    max-width: 330px;
+    padding: 0;
+  }
+  .feature-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* fact  */
+
+  .fact-title {
+    text-align: center;
+  }
+  .fact-item-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* sponsor  */
+  .sponsor-img-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
