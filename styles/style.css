@@ -320,6 +320,10 @@ nav {
     height: 100%;
   }
 
+  .feature-btn-container {
+    display: none;
+  }
+
   /* fact  */
 
   .fact-title {
